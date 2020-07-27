@@ -36,8 +36,8 @@ const StatusIcon = styled.div`
 
 // 头像原型蒙版
 const AvatarClip = styled.div`
-    width: 52px;
-    height: 52px;
+    width: ${({size}) => size};
+    height: ${({size}) => size};
     border-radius: 50%;
     overflow: hidden;
 `;
