@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+// css样式复用，使用styled-components下的css辅助函数
+const circleMixinFun = (color, size = "8px") => css`
+        content: "";
+        display: block;
+        position: absolute;
+        width: ${size};
+        height: ${size};
+        border-radius: 50%;
+        background: ${color};
+`;
 
 // 头像组件最外层容器
 const StyledAvatar = styled.div`
@@ -13,31 +24,25 @@ const StatusIcon = styled.div`
 
     /* 伪元素，&表示指向当前div */
     &::before{
-        content: "";
-        display: block;
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #fff;
-        transform: scale(2); 
+        ${({ size }) => circleMixinFun("white", size)}
+        transform: scale(2)
     }
 
     &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: ${({ theme }) => theme.green};
+        ${({ theme, status, size }) => {
+        if (status === "online") {
+            return circleMixinFun(theme.green, size);
+        } else if (status === "offline") {
+            return circleMixinFun(theme.grey, size);
+        }
+    }}
     }
 `;
 
 // 头像原型蒙版
 const AvatarClip = styled.div`
-    width: ${({size}) => size};
-    height: ${({size}) => size};
+    width: ${({ size }) => size};
+    height: ${({ size }) => size};
     border-radius: 50%;
     overflow: hidden;
 `;

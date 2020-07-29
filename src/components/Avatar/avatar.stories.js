@@ -6,22 +6,41 @@ import face2 from '../../assets/images/face2.jpg';
 import face3 from '../../assets/images/face3.jpg';
 import face4 from '../../assets/images/face4.jpg';
 
+import '../../story.css'
 
+// default avatar (without size)
 export default {
     title: "Avatar",
     components: Avatar,
 };
 
-export const Default = () => <Avatar src={face1} size="48px" status="true"/>;
+export const Default = () =>
+    <Avatar
+        src={face1}
+        size="48px"
+        status="online"
 
+    />;
 
+// check the sizes of avatr
 export const Sizes = () => {
     return (
-        <div>
+        <div className="row-elements">
             <Avatar src={face1} size="48px" />
-            <Avatar src={face2} size="56px" status="true"/>
+            <Avatar src={face2} size="56px" />
             <Avatar src={face3} size="64px" />
-            <Avatar src={face4} size="72px" status="true"/>
+            <Avatar src={face4} size="72px" />
+        </div>
+    );
+};
+
+// avatar with status
+export const WithStatus = () => {
+    return (
+        <div className="row-elements">
+            <Avatar src={face2} status="online" />
+            <Avatar src={face3} status="offline" />
+            <Avatar src={face4} status="offline" size="72px" statusIconSize="12px" />
         </div>
     );
 };
