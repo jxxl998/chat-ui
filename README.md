@@ -7,3 +7,4 @@ Aug 5
 -using hygen to generate the component code  
 -add Input component for search bar and chat content input  
 -text typesetting component: Text for inline element, Paragraph for block and Heading for the title    
+-add Button and Seletor 
