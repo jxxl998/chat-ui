@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import StyledNavBar, { StyledMenuItem, MenuIcon, MenuItems } from './style'
 import Badge from 'components/Badge';
 import Avatar from 'components/Avatar';
@@ -37,9 +37,9 @@ function MenuItem({icon, active, showBadge, ...rest}) {
     );
 }
 
-NavBar.propTypes = {
+// NavBar.propTypes = {
     
-}
+// }
 
 export default NavBar;
 export { MenuItem };
