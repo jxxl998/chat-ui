@@ -1,6 +1,9 @@
 export default {
     primaryColor: "#4f9dde",
     green: "#34d859",
-    gray: "rbga(24, 28, 47, 0.2)",
-    grey: "#dddddd"
+    gray: "rgba(24, 28, 47, 0.2)",
+    red: "#F34848",
+    darkPurple: "#292F4C",
+
+    normal: "1.4rem",
 };

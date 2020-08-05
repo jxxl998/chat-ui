@@ -6,11 +6,11 @@ import face2 from '../../assets/images/face2.jpg';
 import face3 from '../../assets/images/face3.jpg';
 import face4 from '../../assets/images/face4.jpg';
 
-import '../../story.css'
+
 
 // default avatar (without size)
 export default {
-    title: "Avatar",
+    title: "UI/Avatar",
     components: Avatar,
 };
 

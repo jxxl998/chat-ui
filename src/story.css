@@ -1,4 +1,6 @@
 /* this css only use in storybook for display */
+@import url("./index.css");
+
 .row-elements {
     display: flex;
 }

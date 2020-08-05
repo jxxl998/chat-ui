@@ -1,14 +1,12 @@
 import styled, { css } from 'styled-components';
+import { circle } from '../../utils/mixins'
 
 // css样式复用，使用styled-components下的css辅助函数
 const circleMixinFun = (color, size = "8px") => css`
         content: "";
         display: block;
-        position: absolute;
-        width: ${size};
-        height: ${size};
-        border-radius: 50%;
-        background: ${color};
+        position:absolute;
+       ${circle(color,size)}
 `;
 
 // 头像组件最外层容器
@@ -33,7 +31,7 @@ const StatusIcon = styled.div`
         if (status === "online") {
             return circleMixinFun(theme.green, size);
         } else if (status === "offline") {
-            return circleMixinFun(theme.grey, size);
+            return circleMixinFun(theme.gray, size);
         }
     }}
     }
