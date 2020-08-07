@@ -19,7 +19,7 @@ function Icon({
 
 Icon.propTypes = {
     // icon 为接收一个React组件
-    icon: PropTypes.element,
+    icon: PropTypes.elementType,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     color: PropTypes.string,

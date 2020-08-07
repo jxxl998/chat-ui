@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Text from 'components/Text';
 import Paragraph from 'components/Paragraph';
 import Badge from 'components/Badge';
@@ -28,6 +28,12 @@ const Message = styled.div`
     grid-template-columns: 1fr 30px;    
     /* 消息容器内分为2列，消息文本为浮动宽度，30px表示未读数 */
     align-items: center;
+    ${({ replied }) =>
+        replied &&
+        css`
+            grid-template-columns: 24px 1fr 30px;
+        `
+    }
 `;
 
 const MessageText = styled(Paragraph).attrs({ ellipsis: true })``;
@@ -54,6 +60,21 @@ const StyledMessageCard = styled.div`
     ${StyledAvatar} {
         grid-area: avatar;
     };
+    
+    ${({ active }) =>
+        active &&
+        css`
+      background: ${({ theme }) => theme.darkPurple};
+      ${Name}, ${Status}, ${Time}, ${MessageText} {
+        color: white;
+      }
+      ${Status}, ${Time} {
+        opacity: 0.4;
+      }
+      ${activeBar({ barWidth: "4px", shadowWidth: "14px" })}
+
+      /* 隐藏指示条露在外边的部分 */
+      overflow: hidden;`}
 `;
 
 export default StyledMessageCard;
