@@ -55,7 +55,7 @@ const StyledMessageCard = styled.div`
     background: ${({ theme }) => theme.background};
     &::hover {
         box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
-    };
+    }; 
     
     ${StyledAvatar} {
         grid-area: avatar;

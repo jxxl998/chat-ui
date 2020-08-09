@@ -13,4 +13,7 @@ Aug 6
 - add MessageCard for display messages  
 
 Aug 7  
-- assemble message components
+- assemble message components  
+
+Aug 9
+- finish the Conversation components and assembled them
