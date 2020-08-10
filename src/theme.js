@@ -7,14 +7,15 @@ export default {
     gray2: "rgba(241, 237, 237, 0.3)",
     gray3: "rgba(24, 28, 47, 0.3)",
     gray4: "#EFECE8",
+    gray5: "E8E8E8",
 
-    grayDark:"#181C2F",
+    grayDark: "#181C2F",
 
     background: "white",
     inactiveColor: "rgba(41, 47, 76, 0.3)",
     inactiveColorDark: "white",
-     
-    
+
+
 
     normal: "1.4rem",
     medium: "1.6rem",

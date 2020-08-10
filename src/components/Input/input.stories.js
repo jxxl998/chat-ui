@@ -24,4 +24,8 @@ export const WithAffix = () => {
         />
     );
 };
+ 
+export const InputTextWithLabel = () => <Input.Text label="username" />
+
+export const InputTextWithoutLabel = () => <Input.Text />
 

@@ -19,4 +19,6 @@ Aug 9
 - finish the Conversation components and assembled them  
 
 Aug 10
-- finish Profile Component
+- finish Profile component  
+- refacoring the Select component
+- start coding Setting component to edit personal profile
