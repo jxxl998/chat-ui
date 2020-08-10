@@ -24,7 +24,7 @@ function VoiceMessage({ children, time, type, ...rest }) {
         />
       </Button>
       <Icon icon={Wave} width="100%" height="100%" color={theme.primaryColor} />
-      <Text bold>{time}</Text>
+      <Text size="normal">{time}</Text>
     </StyledVoiceMessage>
   );
 }

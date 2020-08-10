@@ -16,4 +16,7 @@ Aug 7
 - assemble message components  
 
 Aug 9
-- finish the Conversation components and assembled them
+- finish the Conversation components and assembled them  
+
+Aug 10
+- finish Profile Component
