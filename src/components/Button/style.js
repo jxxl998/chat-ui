@@ -39,6 +39,7 @@ const typeVariants = {
         background-color: ${({ theme }) => theme.primaryColor};
         color: white;
     `,
+
 };
 
 export default StyledButton;

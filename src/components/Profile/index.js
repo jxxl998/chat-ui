@@ -16,23 +16,48 @@ import cat1 from '../../assets/images/cat1.jpg';
 import cat2 from '../../assets/images/cat2.jpg';
 import cat3 from '../../assets/images/cat3.jpg';
 import { ReactComponent as Cross } from '../../assets/icons/cross.svg';
+import Button from 'components/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPen } from '@fortawesome/free-solid-svg-icons'
 
 
 
 
-function Profile({ children, ...rest }) {
+function Profile({
+    showEditBtn,
+    showCloseIcon = true,
+    onEdit,
+    status,
+    children,
+    ...rest
+}) {
     return (
         <StyledProfile {...rest}>
-            <CloseIcon icon={Cross} />
+            {showCloseIcon && <CloseIcon icon={Cross} />}
             <Avatar
                 css={`
                     margin: 26px 0;
+                    grid-area: 1 / 1 / 3 / 2;
                 `}
                 src={face}
                 size="160px"
-                // status="online"
+                status={status}
                 statusIconSize="25px"
             />
+            {showEditBtn && (
+                <Button
+                    size="52px"
+                    onClick={onEdit}
+                    css={`
+                        grid-area: 1 / 1 / 3 / 2;
+                        align-self: end;
+                        margin-left: 90px;
+                        z-index: 10;
+                    `}
+                >
+                    <FontAwesomeIcon icon={faPen} css={`font-size: 24px;`} />
+                </Button>
+            )}
             <Paragraph
                 size="xlarge"
                 css={`

@@ -68,7 +68,7 @@ const StyledProfile = styled.div`
     padding: 30px;
     height: 100vh;
 
-    margin-top: 2vh;
+    margin-top: 1vh;
     overflow-y: auto;
 `;
 

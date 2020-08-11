@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import StyledSelect from './style'
 import LabelContainer from 'components/LabelContainer';
 
+
 function Select({ children, label, type, ...rest }) {
     const selectWithoutLabel = (
         <StyledSelect type={type} {...rest}>
@@ -17,6 +18,8 @@ function Select({ children, label, type, ...rest }) {
             )
     );
 }
+
+
 
 Select.propTypes = {
     children: PropTypes.any,

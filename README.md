@@ -21,4 +21,8 @@ Aug 9
 Aug 10
 - finish Profile component  
 - refacoring the Select component
-- start coding Setting component to edit personal profile
+- start coding Setting component to edit personal profile  
+
+Aug 11   
+- finish EditProfile and PrivacySetting Components    
+- refacoring the Profile component
