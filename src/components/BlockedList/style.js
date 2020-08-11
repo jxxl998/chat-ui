@@ -4,6 +4,13 @@ import Avatar from 'components/Avatar';
 import Text from 'components/Text';
 import Icon from 'components/Icon';
 
+const FriendList = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 24px; 
+    justify-items: center;
+`;
+
 const BlockedAvatar = styled(Avatar)`
     grid-area: avatar;
 `;
@@ -47,4 +54,4 @@ const StyledBlockedList = styled.div`
 `;
 
 export default StyledBlockedList;
-export { SettingsMenu, BlockedAvatar, BlockedName, CloseIcon, ClosableAvatar };
+export { SettingsMenu, BlockedAvatar, BlockedName, CloseIcon, ClosableAvatar,FriendList };

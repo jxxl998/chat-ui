@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyledBlockedList, { SettingsMenu, ClosableAvatar, BlockedAvatar, BlockedName, CloseIcon } from './style'
+import StyledBlockedList, { SettingsMenu, ClosableAvatar, BlockedAvatar, BlockedName, CloseIcon, FriendList } from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import 'styled-components/macro';
@@ -23,11 +23,18 @@ function BlockedList({ children, ...rest }) {
                 />
                 <Text size="xxlarge">Blocked List</Text>
             </SettingsMenu>
-            <ClosableAvatar>
-                <BlockedAvatar size="105px" src={face} />
-                <CloseIcon width={46} height={51} icon={closeCircle} />
-                <BlockedName>Lok</BlockedName>
-            </ClosableAvatar>
+            {/* FriendList */}
+            <FriendList>
+                {new Array(8).fill(0).map((_, i) => {
+                    return (
+                        <ClosableAvatar key={i}>
+                            <BlockedAvatar size="105px" src={face} />
+                            <CloseIcon width={46} height={51} icon={closeCircle} />
+                            <BlockedName>Lok</BlockedName>
+                        </ClosableAvatar>
+                    );
+                })}
+            </FriendList>
         </StyledBlockedList>
     );
 }
