@@ -20,9 +20,13 @@ Aug 9
 
 Aug 10
 - finish Profile component  
-- refacoring the Select component
+- refactoring the Select component
 - start coding Setting component to edit personal profile  
 
 Aug 11   
 - finish EditProfile and PrivacySetting Components    
-- refacoring the Profile component
+- refactoring the Profile component  
+
+Aug 14   
+- add FilterList, ContactList, FileList   
+- refactoring MessageList in which can transfer props and reuse FilterList  
