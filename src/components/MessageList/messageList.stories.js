@@ -2,7 +2,7 @@ import React from "react";
 import MessageList from ".";
 
 export default {
-    title: "组件/MessageList",
+    title: "PageComponent/MessageList",
     component: MessageList
 };
 

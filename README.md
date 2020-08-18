@@ -29,4 +29,7 @@ Aug 11
 
 Aug 14   
 - add FilterList, ContactList, FileList   
-- refactoring MessageList in which can transfer props and reuse FilterList  
+- refactoring MessageList in which can transfer props and reuse FilterList    
+
+Aug 18  
+- finish extra components NoteList

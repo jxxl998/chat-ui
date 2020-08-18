@@ -26,6 +26,7 @@ const FileSize = styled(Paragraph).attrs({ type: "secondary" })`
 
 const Options = styled(Popover)`
     grid-area: options;
+    justify-self: end;
 `;
 
 const Time = styled(Paragraph).attrs({ type: "secondary" })`
