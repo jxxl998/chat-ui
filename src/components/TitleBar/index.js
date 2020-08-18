@@ -7,6 +7,9 @@ import Text from 'components/Text'
 
 import { faPhone, faVideo, faEllipsisH } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Dropdown from 'components/Dropdown'
+import { DropdownItem } from 'components/Dropdown/style'
+import Seperator from 'components/Seperator'
 
 function TitleBar({
     status,
@@ -29,9 +32,27 @@ function TitleBar({
             </Title>
 
             <Actions>
-                <FontAwesomeIcon icon={faPhone} style={{opacity:"0.2", fontSize:"24px"}} />
-                <FontAwesomeIcon icon={faVideo} style={{opacity:"0.2", fontSize:"24px"}} />
-                <FontAwesomeIcon icon={faEllipsisH} style={{opacity:"0.2", fontSize:"24px"}} />
+                <FontAwesomeIcon icon={faPhone} style={{ opacity: "0.2", fontSize: "24px" }} />
+                <FontAwesomeIcon icon={faVideo} style={{ opacity: "0.2", fontSize: "24px" }} />
+
+                <Dropdown
+                    content={
+                        <>
+                            <DropdownItem>
+                                <Paragraph>info</Paragraph>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Paragraph>close the conversation</Paragraph>
+                            </DropdownItem>
+                            <Seperator />
+                            <DropdownItem>
+                                <Paragraph type="danger">block</Paragraph>
+                            </DropdownItem>
+                        </>
+                    }
+                >
+                    <FontAwesomeIcon icon={faEllipsisH} style={{ opacity: "0.2", fontSize: "24px" }} />
+                </Dropdown>
             </Actions>
         </StyledTitleBar>
     );

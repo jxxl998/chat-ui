@@ -33,4 +33,5 @@ Aug 14
 
 Aug 18  
 - finish extra components NoteList  
-- create VideoCall component in 2 shapes, minimize(float) and fullscreen display, both can be switched  
+- create VideoCall component in 2 shapes, minimize(float) and fullscreen display, both can be switched   
+- add slide down menu component Dropdown to the extra options and apply it to every options icon
