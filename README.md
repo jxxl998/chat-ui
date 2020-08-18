@@ -32,4 +32,5 @@ Aug 14
 - refactoring MessageList in which can transfer props and reuse FilterList    
 
 Aug 18  
-- finish extra components NoteList
+- finish extra components NoteList  
+- create VideoCall component in 2 shapes, minimize(float) and fullscreen display, both can be switched  
