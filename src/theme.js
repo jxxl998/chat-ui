@@ -10,6 +10,9 @@ export default {
     gray4: "#EFECE8",
     gray5: "E8E8E8",
 
+    grediantGray: 
+        "linear-gredient(119.19deg, #FFF 0%, #F8F8F8 63.34%, #FFFFFF 100%)",
+
     grayDark: "#181C2F",
     grayDark2: "rgba(33, 33, 33, 0.58)",
 
