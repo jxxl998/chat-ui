@@ -34,6 +34,18 @@ const StyledMenuItem = styled.div`
 
         ${activeBar()};
         ${({ active }) => (active ? "" : `&::before, &::after {height: 0}`)};
+
+        &:hover {
+            /* ::before,
+            ::after{
+                height: 100%;
+            } */
+
+            svg {
+                transform: scale(1.2);  
+                opacity: 1;
+            }
+        }
         
     }
 `;
@@ -42,6 +54,9 @@ const MenuIcon = styled(FontAwesomeIcon)`
     color: white;
     font-size: 24px;
     opacity: ${({ active }) => (active ? 1 : 0.3)};
+
+    transform: scale(1);
+    transition: 0.1s;
 `;
 
 const MenuItems = styled.div`

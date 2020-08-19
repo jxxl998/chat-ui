@@ -9,26 +9,29 @@ import VoiceMessage from 'components/VoiceMessage'
 import face2 from '../../assets/images/face2.jpg'
 
 
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
     return (
         <StyledConversation {...rest}>
-            <TitleBar status="online"
+            <TitleBar
+                status="online"
                 srcAvatar={face2}
                 name="Leo"
                 time="3h ago"
                 onlineStatus="online"
+                onAvatarClick={onAvatarClick}
+                onVideoClicked={onVideoClicked}
             />
             <Conversations>
-                <ChatBubble time="昨天 下午14：26">Hi!</ChatBubble>
-                <MyChatBubble time="昨天 下午16：30">OH~ Hello!</MyChatBubble>
-                <ChatBubble time="昨天 下午18：30">
+                <ChatBubble time="yesterday 14：26">Hi!</ChatBubble>
+                <MyChatBubble time="yesterday 16：30">OH~ Hello!</MyChatBubble>
+                <ChatBubble time="yesterday 18：30">
                     <VoiceMessage time="01:24" />
                 </ChatBubble>
-                <MyChatBubble time="昨天 下午16：30">
+                <MyChatBubble time="yesterday 16：30">
                     How's it going?🤘
                     <Emoji label="smile">🤘</Emoji>
                 </MyChatBubble>
-                <ChatBubble time="昨天 下午14：26">GOOD!</ChatBubble>
+                <ChatBubble time="yesterday 14：26">GOOD!</ChatBubble>
             </Conversations>
             <Footer />
         </StyledConversation>

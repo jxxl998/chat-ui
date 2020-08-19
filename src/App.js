@@ -4,14 +4,15 @@ import ChatApp from 'components/ChatApp';
 import theme from './theme';
 import { ThemeProvider } from 'styled-components';
 
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <Router>
       <ThemeProvider theme={theme}>
         <ChatApp />
       </ThemeProvider>
-    </div>
+    </Router>
   );
 }
 

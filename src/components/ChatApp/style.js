@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Nav = styled.nav`
     flex-shrink: 0;
@@ -9,7 +9,7 @@ const SideBar = styled.aside`
     min-width: 344px;
     height: 100vh;
     flex: 1;
-    background: ${({theme})=> theme.grediantGray};
+    background: ${({ theme }) => theme.grediantGray};
 `;
 
 const Content = styled.main`
@@ -19,6 +19,12 @@ const Content = styled.main`
 
 const Drawer = styled.div`
     max-width: 310px;
+    width: 0;
+    ${({ show }) =>
+        show &&
+        css`
+            width: 310px;
+        `}
 `;
 
 

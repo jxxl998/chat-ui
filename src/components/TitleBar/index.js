@@ -18,11 +18,13 @@ function TitleBar({
     time,
     onlineStatus,
     children,
+    onAvatarClick,
+    onVideoClicked,
     ...rest
 }) {
     return (
         <StyledTitleBar {...rest}>
-            <Avatar status={status} src={srcAvatar} />
+            <Avatar status={status} src={srcAvatar} onClick={onAvatarClick} style={{cursor: "pointer"}} />
             <Title>
                 <Paragraph size="large">{name}</Paragraph>
                 <Paragraph type="secondary">
@@ -33,7 +35,7 @@ function TitleBar({
 
             <Actions>
                 <FontAwesomeIcon icon={faPhone} style={{ opacity: "0.2", fontSize: "24px" }} />
-                <FontAwesomeIcon icon={faVideo} style={{ opacity: "0.2", fontSize: "24px" }} />
+                <FontAwesomeIcon icon={faVideo} style={{ opacity: "0.2", fontSize: "24px" }}  onClick={onVideoClicked}/>
 
                 <Dropdown
                     content={

@@ -12,7 +12,7 @@ import Paragraph from 'components/Paragraph';
 
 import "styled-components/macro";
 
-function VideoCall({ children, ...rest }) {
+function VideoCall({ children, onHangOffClicked, ...rest }) {
     const [fullScreen, setFullScreen] = useState(true);
 
     if (!fullScreen) {
@@ -56,7 +56,7 @@ function VideoCall({ children, ...rest }) {
                     <FontAwesomeIcon icon={faMicrophone} />
                 </Action>
                 <Action type="hangoff">
-                    <FontAwesomeIcon icon={faPhoneSlash} />
+                    <FontAwesomeIcon icon={faPhoneSlash} onClick={onHangOffClicked}/>
                 </Action>
                 <Action>
                     <FontAwesomeIcon icon={faVolumeMute} />

@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 
+// change the size of circle (avatar)
 export const circle = (color, size = "8px") => css`
         width: ${size};
         height: ${size};
@@ -7,6 +8,7 @@ export const circle = (color, size = "8px") => css`
         background: ${color};
 `;
 
+// hightlight bar when click the menu 
 export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
         css`
         position: relative;
@@ -16,7 +18,8 @@ export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
                 display: block;
                 position: absolute;
                 height: 100%;
-                left: 0;                
+                left: 0;     
+                transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);           
         };
 
         &::before {
@@ -37,8 +40,10 @@ export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
                 );
                 opacity:0.6;
         };
+
 `;
 
+// card display 
 export const card = (radius = "6px", padding = "20px 30px") => css`
         padding: ${padding};
         background: ${({ theme }) => theme.background};

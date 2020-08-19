@@ -7,8 +7,10 @@ import 'styled-components/macro';
 import Text from 'components/Text'
 import { ReactComponent as closeCircle } from '../../assets/icons/closeCircle.svg'
 import face from '../../assets/images/face3.jpg'
+import { useHistory } from 'react-router-dom'
 
 function BlockedList({ children, ...rest }) {
+    const history = useHistory();
     return (
         <StyledBlockedList {...rest}>
             <SettingsMenu>
@@ -20,6 +22,7 @@ function BlockedList({ children, ...rest }) {
                         color: lightgray;
                         /* display: inline-block; */
                     `}
+                    onClick={() => history.goBack()}
                 />
                 <Text size="xxlarge">Blocked List</Text>
             </SettingsMenu>

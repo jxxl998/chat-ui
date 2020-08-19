@@ -37,4 +37,6 @@ Aug 18
 - add slide down menu component Dropdown to the extra options and apply it to every options icon   
 
 Aug 19  
-- assemble all these components in ChatApp, and put it in App.js
+- assemble all these components in ChatApp, and put it in App.js  
+- use react-router to config the routers of SideBar and Content , linking all the single components/pages, also use hooks to pass states   
+- modify some effects
