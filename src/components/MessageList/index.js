@@ -12,6 +12,9 @@ import MessageCard from 'components/MessageCard';
 import face2 from '../../assets/images/face2.jpg'
 import FilterList from 'components/FilterList';
 
+import { useTrail, animated } from 'react-spring'
+import useStaggeredList from 'hooks/useStaggeredList';
+
 
 // 添加了FilterList组件  所以直接使用组件就好
 // function ChatFilter() {
@@ -34,6 +37,7 @@ import FilterList from 'components/FilterList';
 // }
 
 function MessageList({ children, ...rest }) {
+   const trailAnimes = useStaggeredList(6);
     return (
         <StyledMessageList {...rest}>
             <FilterList
@@ -42,18 +46,20 @@ function MessageList({ children, ...rest }) {
             >
                 <ChatList>
                     {[1, 2, 3, 4, 5, 6].map((_, index) => (
-                        <MessageCard
-                            name="username"
-                            key={index}
-                            active={index === 3}
-                            replied={index % 3 === 0}
-                            avatarSrc={face2}
-                            statusText="online"
-                            avatarStatus="online"
-                            time="2h ago"
-                            message="🈚事"
-                            unreadCount={5}
-                        />
+                        <animated.div key={index} style={trailAnimes[index]}>
+                            <MessageCard
+                                name="username"
+                                key={index}
+                                active={index === 3}
+                                replied={index % 3 === 0}
+                                avatarSrc={face2}
+                                statusText="online"
+                                avatarStatus="online"
+                                time="2h ago"
+                                message="🈚事"
+                                unreadCount={5}
+                            />
+                        </animated.div>
                     ))}
                 </ChatList>
             </FilterList>

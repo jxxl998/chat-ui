@@ -18,13 +18,13 @@ function NavBar({ children, ...rest }) {
                 <MenuItem to="/contacts" icon={faUsers} />
                 <MenuItem to="/files" icon={faFolder} />
                 <MenuItem to="/notes" icon={faStickyNote} />
-                <MenuItem icon={faEllipsisH} />
+                <MenuItem  icon={faEllipsisH} />
                 <MenuItem to="/settings" icon={faCog} style={{ alignSelf: "end" }} />
                 {/* 最后一个菜单项单独设置样式向下对齐 */}
             </MenuItems>
         </StyledNavBar>
     );
-} 
+}
 
 function MenuItem({ to, icon, showBadge, ...rest }) {
     const loc = useLocation();

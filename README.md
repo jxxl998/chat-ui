@@ -39,4 +39,7 @@ Aug 18
 Aug 19  
 - assemble all these components in ChatApp, and put it in App.js  
 - use react-router to config the routers of SideBar and Content , linking all the single components/pages, also use hooks to pass states   
-- modify some effects
+- modify some effects  
+
+Aug 22  
+- use react-spring library to add some animes to the lists, also create a hook to reuse this anime effect
