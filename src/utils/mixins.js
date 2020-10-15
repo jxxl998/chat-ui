@@ -9,6 +9,9 @@ export const circle = (color, size = "8px") => css`
 `;
 
 // hightlight bar when click the menu 
+// 使用伪元素来实现高亮条跟阴影
+// before 高亮条
+// after 阴影
 export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
         css`
         position: relative;
@@ -22,6 +25,7 @@ export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) =>
                 transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);           
         };
 
+        
         &::before {
                 width: ${barWidth};
                 background: linear-gradient(
